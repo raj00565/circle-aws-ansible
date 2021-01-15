@@ -42,7 +42,7 @@ jobs:
           command: ls -la
       - run:
           name: Invoking ansible playbook
-          command: ansible-playbook ansible/deploy.yml --user ubuntu --key-file ansible/secret.pem --vault-pass-file .ansible_password.txt
+          command: ansible-playbook AnsibleScripts/site.yml  --user ubuntu --key-file AnsibleScripts/cryotest.pem  --vault-pass-file .ansible_password.txt
           no_output_timeout: 30m
           environment:
             ANSIBLE_HOST_KEY_CHECKING: False
